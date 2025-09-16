@@ -236,7 +236,8 @@ app.put("/edit-story/:id", authenticatetoken, async (req, res) => {
       return res.status(404).json({error:true,message:"Travel story not found"},)
     }
    
-    const placeholderimageurl=`http://localhost:7000/assets/images/3.jpg`;
+    const placeholderimageurl = `${BACKEND_URL}/assets/images/3.jpg`;
+
 
     travelStory.title=title;
     travelStory.story=story;
