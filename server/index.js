@@ -123,7 +123,7 @@ app.post("/image-upload", upload.single("image"), async (req, res) => {
       return res.status(400).json({ error: true, message: "No image upload" });
     }
 
-    const imageUrl = `http://localhost:7000/uploads/${req.file.filename}`;
+    const imageUrl = `https://backend-69d2.onrender.com`;
     res.status(200).json({ imageUrl });
   } catch (error) {
     res.status(500).json({ error: true, message: error.message });
