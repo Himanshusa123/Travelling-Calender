@@ -350,7 +350,7 @@ app.get('/travel-stories/filter',authenticatetoken,async(req,res)=>{
 })
 
 
-app.listen(7000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server is connect");
 });
 
